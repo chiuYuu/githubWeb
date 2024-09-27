@@ -1,0 +1,58 @@
+@import 'taipei-sans-tc';
+@import 'taipei-sans-tc/dist/Light/TaipeiSansTCBeta-Light.css';
+@import 'taipei-sans-tc/dist/Bold/TaipeiSansTCBeta-Bold.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    font-family: Taipei Sans TC;
+    letter-spacing: 3px;
+}
+
+.animation1 {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer
+}
+
+.animation1:hover {
+    color: #2a2a43
+}
+
+.animation1:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -5;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    opacity: 0;
+    background: #b2b852;
+    transition: all 0.5s cubic-bezier(0.42, 0.58, 0, 1.8);
+}
+
+.animation1:hover:after {
+    width: 60%;
+    -webkit-transform: translateX(-50%) skewx(-20deg);
+    -moz-transform: translateX(-50%) skewx(-20deg);
+    -ms-transform: translateX(-50%) skewx(-20deg);
+    transform: translateX(-50%) skewx(-20deg);
+    opacity: 1;
+}
